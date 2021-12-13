@@ -43,4 +43,22 @@ console.log(house.getResidents());
 let Paulo = new Person("Paulo", 19)
 house.addResident(Paulo);
 console.log(house.getResidents());
-//hkj
+
+
+class Programmer extends Person {
+  constructor(name, age, company, salary, language) {
+    super(name, age);
+    this.company = company;
+    this.salary = salary;
+    this.language = language;
+  }
+
+  sayHi = () => {
+    console.log(`Hello, I am a Programmer! My name is ${this.getName()}, I work for ${this.company}`);
+  };
+}
+
+let programmer = new Programmer("Twitch", 100000, "Javascript")
+programmer.sayHi();
+
+// We have direct access to the sayHi method
